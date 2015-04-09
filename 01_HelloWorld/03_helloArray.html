@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../build/react.js"></script>
+    <script src="../build/JSXTransformer.js"></script>
+  </head>
+  <body>
+    <div id="helloArray"></div>
+    <script type="text/jsx">
+      // your code
+      var arr = [
+        <h1>Hello, world!</h1>,
+        <h2>Hello, Amin!</h2>,
+        <h3>React is awesome</h3>
+      ];
+      React.render(
+        <div>{arr}</div>,
+        document.getElementById('helloArray')
+      );
+    </script>
+  </body>
+</html>

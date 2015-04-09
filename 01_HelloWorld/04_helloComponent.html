@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../build/react.js"></script>
+    <script src="../build/JSXTransformer.js"></script>
+  </head>
+  <body>
+    <div id="helloComponent"></div>
+    <script type="text/jsx">
+      // your code
+      var HelloMessage = React.createClass({
+        render: function() {
+          return <h1>hello, {this.props.name}</h1>;
+        }
+      });
+      React.render(
+        <HelloMessage name="John"/>,
+        document.getElementById('helloComponent')
+      );
+    </script>
+  </body>
+</html>
