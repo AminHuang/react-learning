@@ -8,11 +8,32 @@
   <body>
     <div id="content"></div>
     <script type="text/jsx">
+      var CommentList = React.createClass({
+        render: function () {
+          return (
+            <div className="comentList">
+              Hello, this is a CommentList!
+            </div>
+          );
+        }
+      });
+
+      var CommentForm = React.createClass({
+        render: function () {
+          return (
+            <div className="commentForm">
+              Hello, this is a CommentForm!
+            </div>
+          );
+        }
+      });
+
       var CommentBox = React.createClass({
         render: function () {
           return (
             <div className="commentBox">
-              Hello, this is a CommentBox!
+              <CommentList />
+              <CommentForm />
             </div>
           );
         }
