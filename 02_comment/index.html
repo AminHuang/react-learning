@@ -6,6 +6,22 @@
     <script src="../build/jquery.min.js"></script>
   </head>
   <body>
-    <script type="text/jsx"></script>
+    <div id="content"></div>
+    <script type="text/jsx">
+      var CommentBox = React.createClass({
+        render: function () {
+          return (
+            <div className="commentBox">
+              Hello, this is a CommentBox!
+            </div>
+          );
+        }
+      });
+
+      React.render(
+        <CommentBox />,
+        document.getElementById('content')
+      );
+    </script>
   </body>
 </html>
