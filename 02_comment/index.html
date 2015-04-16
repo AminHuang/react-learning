@@ -10,10 +10,7 @@
     <div id="content"></div>
     <script type="text/jsx">
       // json
-      var data = [
-        {author:"Amin", text:"This is one comment."},
-        {author:"John", text:"*Anothor* comment."}
-      ];
+      
       // 将评论文本做Markdown转换并输出
       var converter = new Showdown.converter(); 
       var Comment = React.createClass({
@@ -58,6 +55,9 @@
 
       // 修改代码使得data通过props进行传递
       var CommentBox = React.createClass({
+        getInitialState: function () {
+          return {data: []};
+        },
         render: function () {
           return (
             <div className="commentBox">
@@ -70,7 +70,7 @@
       });
 
       React.render(
-        <CommentBox data={data} />,
+        <CommentBox url="comments.json" />,
         document.getElementById('content')
       );
     </script>
